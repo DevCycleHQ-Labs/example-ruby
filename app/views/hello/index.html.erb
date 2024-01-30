@@ -1,0 +1,22 @@
+<div class="App-wrapper">
+    <div class="App-content">
+        <div class="ToggleBot-message">
+            "<%= @message %>"
+        </div>
+        <img
+            src="<%= asset_path(@togglebot_src) %>"
+            class="ToggleBot-logo spin-<%= @speed %>"
+            alt="togglebot"
+        />
+        <div class="ToggleBot-variation">
+            Serving Variation: <b>"<%= @variation_name %>"</b>
+        </div>
+    </div>
+
+    <div class="App-description">
+        <div>
+        <h3><%= @header %></h3>
+        <p><%= @body %></p>
+        </div>
+    </div>
+</div>
