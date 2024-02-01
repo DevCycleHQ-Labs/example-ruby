@@ -22,7 +22,7 @@ You can find this under [Settings > Environments](https://app.devcycle.com/r/env
 
 ### Development
 
-`docker build -t devcycle-ruby-example . && docker run -p 8000:8000 devcycle-ruby-example`
+`source .env && docker build --build-arg DEVCYCLE_SERVER_SDK_KEY -t devcycle-ruby-example . && docker run -p 8000:8000 devcycle-ruby-example`
 
 Runs the app in the development mode.\
 Requests may be sent to http://localhost:8000

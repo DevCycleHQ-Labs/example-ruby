@@ -7,11 +7,13 @@ FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
 # Rails app lives here
 WORKDIR /rails
 
+ARG DEVCYCLE_SERVER_SDK_KEY
+
 # Set development environment
 ENV RAILS_ENV="development" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
-    DEVCYCLE_SERVER_SDK_KEY="dvc_server_4def8c4a_9042_43b5_bf40_3b57019ae677_13ae039"
+    DEVCYCLE_SERVER_SDK_KEY=${DEVCYCLE_SERVER_SDK_KEY}
 
 
 # Throw-away build stage to reduce size of final image
